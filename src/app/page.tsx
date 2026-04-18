@@ -1,7 +1,7 @@
 import BackgroundAnimator from "@/components/BackgroundAnimator";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { ArrowRight, Mail, Play, CheckCircle, Camera, Leaf, Heart, Sun } from "lucide-react";
+import { ArrowRight, Mail, Play, CheckCircle, Camera, Leaf, Heart, Sun, MessageCircle } from "lucide-react";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -192,9 +192,12 @@ export default function Home() {
               Send me a message to book a trial session or inquire about regular classes.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-6 justify-center">
               <a href="https://www.instagram.com/_yogwithme_gha?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 px-8 py-5 bg-[#E1306C] text-white font-semibold rounded-2xl hover:opacity-90 transition-opacity shadow-md hover:-translate-y-1">
                 <Camera size={24} /> Message on Instagram
+              </a>
+              <a href="https://wa.me/919536284930?text=Hi%20I%20am%20interested%20in%20Yoga%20session" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 px-8 py-5 bg-[#25D366] text-white font-semibold rounded-2xl hover:opacity-90 transition-opacity shadow-md hover:-translate-y-1">
+                <MessageCircle size={24} /> WhatsApp
               </a>
               <a href="mailto:megha21swami@gmail.com" className="flex items-center justify-center gap-3 px-8 py-5 bg-foreground text-background font-semibold rounded-2xl hover:bg-foreground/90 transition-opacity shadow-md hover:-translate-y-1">
                 <Mail size={24} /> Send Email
