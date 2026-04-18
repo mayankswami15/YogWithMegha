@@ -1,6 +1,7 @@
 import BackgroundAnimator from "@/components/BackgroundAnimator";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Gallery from "@/components/Gallery";
 import { ArrowRight, Mail, Play, CheckCircle, Camera, Leaf, Heart, Sun, MessageCircle } from "lucide-react";
 
 const jsonLd = {
@@ -145,42 +146,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-heading font-bold mb-10 text-center">Moments of Peace</h2>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {[
-                "Screenshot 2026-04-18 043554.png",
-                "Screenshot 2026-04-18 043613.png",
-                "Screenshot 2026-04-18 043625.png",
-                "Screenshot 2026-04-18 043714.png",
-                "Screenshot 2026-04-18 043734.png",
-                "Screenshot 2026-04-18 043811.png",
-                "Screenshot 2026-04-18 043856.png",
-                "Screenshot 2026-04-18 043934.png"
-              ].map((imgSrc, idx) => (
-                <a 
-                  key={idx} 
-                  href="https://www.instagram.com/_yogwithme_gha?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="aspect-square bg-accent rounded-xl md:rounded-2xl overflow-hidden relative group block"
-                >
-                  <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity z-10 flex items-center justify-center">
-                    <Camera className="text-white" size={32} />
-                  </div>
-                  <img 
-                    src={`/gallery/${imgSrc}`} 
-                    alt={`Megha Swami yoga pose ${idx + 1}`} 
-                    loading="lazy"
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </a>
-              ))}
-            </div>
-            
-            <div className="mt-10 text-center">
-              <a href="https://www.instagram.com/_yogwithme_gha?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-primary font-semibold hover:text-primary/80 transition-colors">
-                <Camera size={20} /> Follow on Instagram
-              </a>
-            </div>
+            <Gallery />
           </div>
         </section>
 
